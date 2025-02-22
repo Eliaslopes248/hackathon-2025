@@ -1,0 +1,90 @@
+[
+    {
+      "businessName": "Favor Desserts",
+      "founder": "Keijuane Hester",
+      "yearFounded": 2004,
+      "address": "4520 South Alston Ave, Durham, NC",
+      "state": "NC",
+      "city": "Durham",
+      "website": "https://www.favordesserts.com",
+      "description": "While offering the traditional baker's products, we are known for our Red Velvet cupcakes, 5-Flavored pound cake, Carrot cake, and Italian Creme cake, just to name a few.",
+      "productType": "food",
+      "location": {"lat": 37.778, "lng": -122.494}
+    },
+    {
+      "businessName": "Dames Chicken and Waffles",
+      "founder": "Damion 'Dame' Moore and Randy Wadsworth",
+      "yearFounded": 2010,
+      "address": "530 Foster St #130, Durham, NC 27701",
+      "state": "NC",
+      "city": "Durham",
+      "website": "https://dameschickenwaffles.com",
+      "description": "Breakfast spot specializing in chicken and waffles.",
+      "productType": "food",
+      "location": {"lat": 37.6748, "lng": -122.4594}
+    },
+    {
+      "businessName": "Mama Dip's Kitchen",
+      "founder": "Mildred Council",
+      "yearFounded": 1976,
+      "address": "408 West Rosemary St. Chapel Hill, NC 27516",
+      "state": "NC",
+      "city": "Chapel Hill",
+      "website": "https://mamadips.com",
+      "description": "If you need a carryout order, to be seated for a meal, a space for private dining, a southern-style catering, a family-size meal to take home, or simply to stop in to say hello, we are happy to welcome you to Mama Dip’s Kitchen.",
+      "productType": "food",
+      "location": {"lat": 37.3748, "lng": -122.2194}
+    },
+    {
+      "businessName": "3kingsgrooming",
+      "founder": "Michael, Brandon & Eric Nwankwo",
+      "yearFounded": 2019,
+      "website": "https://3kingsgrooming.com",
+      "description": "hair",
+      "productType": "hair care and accessories",
+      "location": false
+    },
+    {
+      "businessName": "AJ's Cheesecakes",
+      "founder": "Ali Edwards",
+      "yearFounded": 2021,
+      "address": "2506 Fayetteville St, Durham, NC 27707",
+      "website": "https://ajscheesecakes.net/",
+      "description": "The business specializes in handcrafted cheesecakes, offering bold and unique flavors that connect people across communities and states.",
+      "productType": "food",
+      "location": {"lat": 37.7740, "lng": -122.5194}
+    },
+    {
+      "businessName": "Telfar",
+      "founder": "Telfar Clemens",
+      "yearFounded": 2005,
+      "address": "404 Broadway, New York, NY 10013",
+      "state": "NY",
+      "city": "NYC",
+      "website": "https://telfar.net",
+      "description": "Lux fashion.",
+      "productType": "clothing",
+      "location": {"lat": 37.7548, "lng": -122.5194}
+    },
+    {
+      "businessName": "Ashley Squared Salon",
+      "founder": "Ashley Brooks and Ashley Sanders",
+      "yearFounded": null,
+      "address": "2232 Page Road, Suite 104, Durham, North Carolina 27703",
+      "website": "https://www.ashleysquared.com",
+      "description": "We aim to educate clients on hair. From the services we provide, demonstrating proper tool usage, as well as the products we recommend. Providing an experience unlike any other.",
+      "productType": "hair",
+      "location": {"lat": 37.7248, "lng": -122.4114}
+    },
+    {
+      "businessName": "Jordan Brand",
+      "founder": "Michael Jordan",
+      "yearFounded": 1997,
+      "address": "One Bowerman Drive, Beaverton, Oregon, USA",
+      "state": "Oregon",
+      "city": "Beaverton",
+      "description": "Jordan Brand, a subsidiary of Nike, was established in 1997, evolving from the successful Air Jordan line introduced in 1985. The brand offers a wide range of athletic footwear, apparel, and accessories, blending performance technology with contemporary design. Jordan Brand has become a cultural icon, extending its influence beyond basketball into various aspects of lifestyle and fashion.",
+      "productType": "sports",
+      "location": {"lat": 35.7748, "lng": -122.414}
+    }
+  ]

@@ -2,34 +2,15 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import businesses from './businessData.json';
+
 const Businesses = ({ names, setLongLat}) => {
     const [selectedBusiness, setSelectedBusiness] = useState(0);
     const navigate = useNavigate()
     useEffect(
         () => setLongLat(businesses[selectedBusiness].location)
     , [selectedBusiness])
-    useEffect(
-        () => setSelectedBusiness(0)
-    , [selectedBusiness])
-    const businesses = [{
-        name: "Black, Bold, & Beauty" ,
-        genre: "Beauty",
-        desc: "No description available.",
-        img: "", // Placeholder image
-        address: "No address available",
-        location: {lat: 37.7748, lng: -122.4194},
-        hours: "No hours available",
-      },
-      {
-        name: "Black Owned Business",
-        genre: "General",
-        desc: "No description available.",
-        img: "", // Placeholder image
-        address: "No address available",
-        location: {lat: 37.7768, lng: -122.4104},
-        hours: "No hours available",
-      }];
-
+    
       const increment = (val) => {
         setSelectedBusiness((prev) => {
           const newIndex = Math.max(0, Math.min(businesses.length - 1, prev + val));
@@ -38,11 +19,6 @@ const Businesses = ({ names, setLongLat}) => {
         });
       };
       
-
-    useEffect(() =>{
-        setLongLat(businesses[selectedBusiness].location)
-    }, [selectedBusiness])
-
 
 
     return (
@@ -63,14 +39,14 @@ const Businesses = ({ names, setLongLat}) => {
             </div>
             <div className="w-1/2 h-full flex flex-col relative p-2">
                 <div className=" space-y-8">
-                    <h1 className="font-black text-2xl line-clamp-1">{businesses[selectedBusiness].name}</h1>
+                    <h1 className="font-black text-2xl line-clamp-1">{businesses[selectedBusiness].businessName}</h1>
                     <h1 className="text-sm line-clamp-1 font-light">
-                     <strong>Genre: </strong> {businesses[selectedBusiness].genre}
+                     <strong>Genre: </strong> {businesses[selectedBusiness].productType}
 
                     </h1>
                     <p className="text-sm font-light">
                         <strong>Description: </strong> 
-                        {businesses[selectedBusiness].desc}
+                        {businesses[selectedBusiness].description}
                     </p>
                 </div>
                 <button
