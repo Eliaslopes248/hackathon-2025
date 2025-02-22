@@ -1,17 +1,54 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const results = [
-    { name: "Luxury Salon", genre: "Hair care" },
-    { name: "Fashion Hub", genre: "Clothing" },
-    { name: "Gourmet Delights", genre: "Culinary" },
-    { name: "Elite Accessories", genre: "Luxury" },
-    { name: "The Style Spot", genre: "Clothing" },
+    { 
+      name: "Luxury Salon", 
+      genre: "Hair care", 
+      desc: "Top-tier salon services with expert stylists.",
+      img: "https://via.placeholder.com/300", // Placeholder image URL
+      address: "123 Main St, Cityville",
+      hours: "Mon-Fri: 9AM - 6PM"
+    },
+    { 
+      name: "Fashion Hub", 
+      genre: "Clothing", 
+      desc: "Trendy fashion store with the latest styles.",
+      img: "https://via.placeholder.com/300",
+      address: "456 Fashion Ave, Style City",
+      hours: "Mon-Sat: 10AM - 8PM"
+    },
+    { 
+      name: "Gourmet Delights", 
+      genre: "Culinary", 
+      desc: "Delicious gourmet meals made fresh daily.",
+      img: "https://via.placeholder.com/300",
+      address: "789 Food St, Tasty Town",
+      hours: "Daily: 11AM - 10PM"
+    },
+    { 
+      name: "Elite Accessories", 
+      genre: "Luxury", 
+      desc: "Exclusive high-end accessories and jewelry.",
+      img: "https://via.placeholder.com/300",
+      address: "101 Luxury Ln, Opulence City",
+      hours: "Mon-Sun: 10AM - 7PM"
+    },
+    { 
+      name: "The Style Spot", 
+      genre: "Clothing", 
+      desc: "Unique and stylish clothing for every occasion.",
+      img: "https://via.placeholder.com/300",
+      address: "222 Trendy Blvd, Fashion City",
+      hours: "Mon-Sat: 9AM - 9PM"
+    }
   ];
 
   const handleSearch = (e) => {
@@ -24,8 +61,7 @@ export function SearchBar() {
         (selectedGenre === "" || item.genre === selectedGenre)
     );
     setFilteredResults(filtered);
-
-    setShowDropdown(value !== ""); // Show dropdown only if there is input
+    setShowDropdown(value !== "");
   };
 
   const handleGenreChange = (e) => {
@@ -46,7 +82,11 @@ export function SearchBar() {
       if (!searchTerm) {
         setSearchTerm("");
       }
-    }, 200); // Small delay to allow click selection before hiding
+    }, 200);
+  };
+
+  const handleSelectBusiness = (business) => {
+    navigate("/business", { state: { business } });
   };
 
   return (
@@ -82,6 +122,7 @@ export function SearchBar() {
                   <div
                     key={index}
                     className="p-2 hover:bg-gray-200 cursor-pointer"
+                    onMouseDown={() => handleSelectBusiness(item)}
                   >
                     {item.name} ({item.genre})
                   </div>
