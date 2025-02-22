@@ -57,7 +57,7 @@ const Map = (props) => {
       options={{ styles: mapStyles }}
       >
       <Marker
-  position={center}
+  position={props?.location || center}
   label={{
     text: "San Francisco",
     fontSize: "16px",
